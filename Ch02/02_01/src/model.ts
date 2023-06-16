@@ -2,19 +2,26 @@ let displayName: string = "Jess's standing desk";
 let inventoryType: string = "furniture";
 let trackingNumber: string = "FD123455";
 let createDate: Date = new Date();
-let originalCost = 425;
+let originalCost: number = 425;
 
-function getInventoryItem(trackingNumber: string): {
+enum InventoryItemType {
+    Computer,
+    Furniture
+}
+
+interface InventoryItem {
     displayName: string;
-    inventoryType: string;
+    inventoryType: InventoryItemType;
     trackingNumber: string;
     createDate: Date;
     originalCost: number;
-} {
-    return null;
 }
 
-function saveInventoryItem(item) {
+function getInventoryItem(trackingNumber: string): InventoryItem {
+    return null;
+} 
+
+function saveInventoryItem(item: InventoryItem) {
 
 }
 
